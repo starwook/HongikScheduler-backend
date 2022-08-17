@@ -10,7 +10,7 @@ import javax.persistence.Id;
 
 @Getter
 @Entity
-public class Subjects {
+public class Subject {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -18,8 +18,25 @@ public class Subjects {
 
     public int grade;
     public String num; //학수번호
+    public String special; //비고
     public String professor;
     public String subjectName;
     public String date;
 
+
+
+
+
+    public Subject(String grade, String num, String special, String professor, String subjectName, String date) {
+        this.grade = Integer.parseInt(grade);
+        this.num = num;
+        this.special = special;
+        this.professor = professor;
+        this.subjectName = subjectName;
+        this.date = date;
+    }
+
+    public Subject() {
+
+    }
 }
