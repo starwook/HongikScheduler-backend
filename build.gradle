@@ -26,6 +26,7 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	runtimeOnly 'com.h2database:h2'  //이거랑 이 밑에줄이 있어야 디비없이 구동 가능
+	implementation 'org.springframework.session:spring-session-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
 	implementation 'org.jsoup:jsoup:1.13.1'
 	implementation 'org.springframework.session:spring-session-jdbc'
