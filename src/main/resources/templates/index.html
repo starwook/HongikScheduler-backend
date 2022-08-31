@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html >
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width ,initial-scale=1">
@@ -7,33 +7,37 @@
         <link
             rel="styleSheet"
             media="screen and (min-width:1024px)"
-            th:href ="@{/css/styleSheetSafari.css}">
-<!--        <link-->
-<!--            rel="styleSheet"-->
-<!--            media="screen and (max-width:480px)"-->
-<!--            href="../static/css/styleSheetPhone.css">-->
+            th:href="@{/css/styleSheetSafari.css}">
+        <!-- <link-->
+        <!-- rel="styleSheet"-->
+        <!-- media="screen and (max-width:480px)"-->
+        <!-- href="../static/css/styleSheetPhone.css">-->
     </head>
     <body>
-        <h1 th:text = "${vso}"> </h1>
-        <div id="container">
+
+        <div th:id="container">
             <header class="header">
                 <h1 >H-마법사</h1>
             </header>
-            <aside class="container1">
+            <aside th:class="container1">
                 <form>
                     <h2>
                         * 과목 선택</h2>
                     <ul>
                         <li>
-                            <label for="subjectName">과목 이름
+                            <label th:for="subjectName">과목 이름
                             </label>
                             <input
                                 type="text"
                                 id="subjectName"
                                 autofocus="autofocus"
                                 placeholder="공백없이 입력하세요">
-                            <button onclick="Testing();return false;">검색하기
+                            <button type="button" th:myName = "${vso}" th:onclick="getSubject(subjectList)" th:text = "|${subjectList}검색하기|">
+
                             </button>
+                            <tr th:each ="subject : ${subjectList}">
+                                <td th:text = "${subject.professor}"> </td>
+                            </tr>
                         </li>
                     </ul>
                     <label ><input type="radio" name="noSpecial">
@@ -68,7 +72,7 @@
                 </ol>
             </section>
             <h2>* 공강 희망 요일 선택</h2>
-            <footer class="container3">
+            <footer th:class="container3">
                 <ul>
                     <li>
                         <label><input type="radio" name="monday" value="an">
@@ -96,7 +100,14 @@
                 </ul>
             </footer>
         </div>
-        <script src="../static/js/func.js"></script>
+        <script th:inline="javascript">
+            /*<![CDATA[*/
+            let subjectList = /*[[ ${subjectList} ]]*/ 'default';
+            /*]]*/
+        </script>
+        <script type="text/javascript" th:src="@{/js/func.js}">
+
+        </script>
     </body>
 
 </html>
