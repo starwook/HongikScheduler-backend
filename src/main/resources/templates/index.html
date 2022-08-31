@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width ,initial-scale=1">
+        <title>연습문제 1</title>
+        <link
+            rel="styleSheet"
+            media="screen and (min-width:1024px)"
+            th:href ="@{/css/styleSheetSafari.css}">
+<!--        <link-->
+<!--            rel="styleSheet"-->
+<!--            media="screen and (max-width:480px)"-->
+<!--            href="../static/css/styleSheetPhone.css">-->
+    </head>
+    <body>
+        <h1 th:text = "${vso}"> </h1>
+        <div id="container">
+            <header class="header">
+                <h1 >H-마법사</h1>
+            </header>
+            <aside class="container1">
+                <form>
+                    <h2>
+                        * 과목 선택</h2>
+                    <ul>
+                        <li>
+                            <label for="subjectName">과목 이름
+                            </label>
+                            <input
+                                type="text"
+                                id="subjectName"
+                                autofocus="autofocus"
+                                placeholder="공백없이 입력하세요">
+                            <button onclick="Testing();return false;">검색하기
+                            </button>
+                        </li>
+                    </ul>
+                    <label ><input type="radio" name="noSpecial">
+                        특수 학과 과목 포함
+                    </label>
+                    <label><input type="radio" name="noGong">
+                        공과대학 수강 불가 과목 보지 말기
+                    </label>
+
+                </form>
+            </aside>
+            <h2>
+                * 과목 목록</h2>
+            <ul id="itemList"></ul>
+            <section class="container2">
+                <ol>
+                    <li>자료구조
+                        <a href='subjectPack'>추가</a>
+                    </li>
+                    <li>자료구조
+                        <a href='subjectPack'>추가</a>
+                    </li>
+                    <li>자료구조
+                        <a href='subjectPack'>추가</a>
+                    </li>
+                    <li>자료구조
+                        <a href='subjectPack'>추가</a>
+                    </li>
+                    <li>자료구조
+                        <a href='subjectPack'>추가</a>
+                    </li>
+                </ol>
+            </section>
+            <h2>* 공강 희망 요일 선택</h2>
+            <footer class="container3">
+                <ul>
+                    <li>
+                        <label><input type="radio" name="monday" value="an">
+                            월공강</label>
+                    </li>
+
+                    <li>
+                        <label><input type="radio" name="tuesday" value="an">
+                            화공강</label>
+
+                    </li>
+                    <li>
+                        <label><input type="radio" name="wendesday" value="an">
+                            수공강
+                        </label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="thursday" value="an">
+                            목공강</label>
+                    </li>
+                    <li>
+                        <label><input type="radio" name="friday" value="an">
+                            금공강</label>
+                    </li>
+                </ul>
+            </footer>
+        </div>
+        <script src="../static/js/func.js"></script>
+    </body>
+
+</html>

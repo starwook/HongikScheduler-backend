@@ -12,7 +12,7 @@ import java.util.*;
 
 @Service
 @RequiredArgsConstructor
-public class SchedulingService {
+public class SchedulingAlgorithm {
     private final SubjectRepository subjectRepository;
     private final String [][] schedulers = new String[15][6];
     private final List<Subject> finalSubjects = new ArrayList<>();//선택된 과목의 전체
@@ -21,7 +21,6 @@ public class SchedulingService {
     private int  totalCount = 0;
     @Transactional
     public void findAllSchedules(List<String> choosedSubjects){
-
         init();
         List<Subject> allSubjects = subjectRepository.findAll(); //전체과목
         for(Subject findSubject: allSubjects){ //전체에서 검사
