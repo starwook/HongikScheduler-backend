@@ -1,0 +1,31 @@
+[
+    {
+        "id": 1,
+        "grade": "3",
+        "num": "343554-3",
+        "professor": "단칼",
+        "subjectName": "자료구조",
+        "date": "월23,수4"
+    }, {
+        "id": 2,
+        "grade": "3",
+        "num": "343554-2",
+        "professor": "단칼1",
+        "subjectName": "자료구조2",
+        "date": "금23,수4"
+    }, {
+        "id": 3,
+        "grade": "3",
+        "num": "343554-1",
+        "professor": "단칼2",
+        "subjectName": "자료구조3",
+        "date": "화23,수4"
+    }, {
+        "id": 4,
+        "grade": "3",
+        "num": "343554-4",
+        "professor": "단칼3",
+        "subjectName": "자료구조4",
+        "date": "목23,수4"
+    }
+]

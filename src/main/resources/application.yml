@@ -21,7 +21,14 @@ spring:
     properties:
       hibernate:
         format_sql: true
-
   decorator:
     datasource:
       p6spy.enable-logging: true
+  mvc:
+    thymeleaf:
+#      prefix: classpath:templates/
+      suffix: .html
+      cache: false
+
+server:
+   port: 8081
