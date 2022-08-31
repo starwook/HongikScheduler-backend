@@ -35,7 +35,11 @@ public class Subject {
         this.subjectName = subjectName;
         this.date = date;
     }
-
+    public Subject(String grade,String professor,String subjectName){
+        this.grade = Integer.parseInt(grade);
+        this.professor = professor;
+        this.subjectName =subjectName;
+    }
     public Subject() {
 
     }

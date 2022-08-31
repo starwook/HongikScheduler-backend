@@ -32,12 +32,13 @@
                                 id="subjectName"
                                 autofocus="autofocus"
                                 placeholder="공백없이 입력하세요">
-                            <button type="button" th:myName = "${vso}" th:onclick="getSubject(subjectList)" th:text = "|${subjectList}검색하기|">
+                            <button type="button" th:myName = "${vso}" th:onclick="getSubject(subjectList)" >
+                                검색하기
 
                             </button>
-                            <tr th:each ="subject : ${subjectList}">
-                                <td th:text = "${subject.professor}"> </td>
-                            </tr>
+<!--                            <tr th:each ="subject : ${subjectList}">-->
+<!--                                <td th:text = "${subject.professor}"> </td>-->
+<!--                            </tr>-->
                         </li>
                     </ul>
                     <label ><input type="radio" name="noSpecial">
@@ -49,27 +50,12 @@
 
                 </form>
             </aside>
-            <h2>
-                * 과목 목록</h2>
-            <ul id="itemList"></ul>
+            <h2>* 검색 과목 목록</h2>
+
             <section class="container2">
-                <ol>
-                    <li>자료구조
-                        <a href='subjectPack'>추가</a>
-                    </li>
-                    <li>자료구조
-                        <a href='subjectPack'>추가</a>
-                    </li>
-                    <li>자료구조
-                        <a href='subjectPack'>추가</a>
-                    </li>
-                    <li>자료구조
-                        <a href='subjectPack'>추가</a>
-                    </li>
-                    <li>자료구조
-                        <a href='subjectPack'>추가</a>
-                    </li>
-                </ol>
+                    <ol id = "itemList">
+
+                    </ol>
             </section>
             <h2>* 공강 희망 요일 선택</h2>
             <footer th:class="container3">
@@ -78,7 +64,6 @@
                         <label><input type="radio" name="monday" value="an">
                             월공강</label>
                     </li>
-
                     <li>
                         <label><input type="radio" name="tuesday" value="an">
                             화공강</label>
@@ -102,12 +87,13 @@
         </div>
         <script th:inline="javascript">
             /*<![CDATA[*/
-            let subjectList = /*[[ ${subjectList} ]]*/ 'default';
+            let subjectList = [[ ${subjectList} ]] ;
             /*]]*/
         </script>
-        <script type="text/javascript" th:src="@{/js/func.js}">
-
-        </script>
+        <script type="text/javascript" th:src="@{/js/func.js}"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     </body>
 
 </html>

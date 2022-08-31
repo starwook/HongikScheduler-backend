@@ -28,13 +28,15 @@ public class QueryProcessor {
         return subjectMapper.toSubject(subjectList);
     }
     public List<Subject> getAllSubject(){
-        Subject subject = new Subject("3", "12344", "목금3,4", "김일도", "자료구조", "수23목34");
-        Subject subject1 = new Subject("3", "12344", "목금3,4", "김명", "자료구조", "수23목34");
-        Subject subject2 = new Subject("3", "12344", "목금3,4", "김도", "자료구조", "수23목34");
+        Subject subject = new Subject("3",  "김일도", "자료구조");
+        Subject subject1 = new Subject("2",  "김명", "인공지능");
+        Subject subject2 = new Subject("1", "김도", "자료구조");
+        Subject subject3 = new Subject("4", "김도", "운영체제");
         List<Subject> subjectList = new ArrayList<>();
         subjectList.add(subject);
         subjectList.add(subject1);
         subjectList.add(subject2);
+        subjectList.add(subject3);
         return subjectList;
     }
 }
