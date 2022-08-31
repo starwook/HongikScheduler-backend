@@ -25,6 +25,9 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+
 	runtimeOnly 'com.h2database:h2'  //이거랑 이 밑에줄이 있어야 디비없이 구동 가능
 	implementation 'org.springframework.session:spring-session-jdbc'
 	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
@@ -34,6 +37,8 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.6.4'
 	implementation group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '4.1.1'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+	annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
 }
 
 tasks.named('test') {

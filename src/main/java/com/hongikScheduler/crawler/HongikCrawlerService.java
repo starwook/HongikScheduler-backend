@@ -27,7 +27,7 @@ public class HongikCrawlerService {
     private static final String urlHongikSugang = "https://sugang.hongik.ac.kr/";
     private static final String urlHongik = "https://www.hongik.ac.kr/login.do";
 
-    @PostConstruct
+
     public void getData() throws InterruptedException{
 
         Selenium selenium = new Selenium();
